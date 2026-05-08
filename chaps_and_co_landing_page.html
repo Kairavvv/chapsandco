@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chaps & Co Barbers | Barber Shop in Centurion, Raslouw | Book Online</title>
+<meta name="description" content="Top-rated barber shop in Raslouw, Centurion. Expert fades, lineups & cuts by Mohammed, Papu & Ahmad. Book instantly on Fresha. Call 072 696 7979.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HairSalon",
+  "name": "Chaps & Co Barbers",
+  "url": "https://chapsandco.co.za",
+  "telephone": "+27726967979",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Jewel Beetle St",
+    "addressLocality": "Raslouw, Pretoria",
+    "postalCode": "0157",
+    "addressCountry": "ZA"
+  },
+  "geo": {"@type": "GeoCoordinates", "latitude": -25.8553, "longitude": 28.1522},
+  "priceRange": "$$",
+  "employee": [
+    {"@type": "Person", "name": "Mohammed", "jobTitle": "Owner & Barber"},
+    {"@type": "Person", "name": "Papu", "jobTitle": "Senior Barber"},
+    {"@type": "Person", "name": "Ahmad", "jobTitle": "Barber"}
+  ],
+  "makesOffer": {"@type": "Offer", "name": "Online Booking", "url": "https://www.fresha.com/a/chaps-and-co-raslouw-pretoria-chaps-co-barbers-jewel-beetle-street-giv79nqi"}
+}
+</script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --gold: #C9A84C;
+    --gold-light: #E8C97A;
+    --gold-dim: #8A6E30;
+    --black: #0A0A0A;
+    --dark: #111111;
+    --dark2: #1A1A1A;
+    --dark3: #242424;
+    --white: #F5F3EE;
+    --muted: #888580;
+    --border: rgba(201,168,76,0.2);
+    --ff-head: 'Playfair Display', Georgia, serif;
+    --ff-body: 'Inter', system-ui, sans-serif;
+    --radius: 4px;
+    --radius-lg: 8px;
+    --fresha: "https://www.fresha.com/a/chaps-and-co-raslouw-pretoria-chaps-co-barbers-jewel-beetle-street-giv79nqi";
+  }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--ff-body);
+    background: var(--black);
+    color: var(--white);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { text-decoration: none; color: inherit; }
+  img { display: block; max-width: 100%; }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(10,10,10,0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 24px;
+    height: 64px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .nav-logo {
+    font-family: var(--ff-head);
+    font-size: 20px; font-weight: 700;
+    color: var(--gold);
+    letter-spacing: 0.02em;
+  }
+  .nav-logo span { color: var(--white); }
+  .nav-links { display: flex; align-items: center; gap: 28px; }
+  .nav-links a { font-size: 13px; font-weight: 500; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--gold); }
+  .btn-gold {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--black);
+    font-family: var(--ff-body);
+    font-size: 13px; font-weight: 600;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    padding: 10px 20px;
+    border-radius: var(--radius);
+    border: none; cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+  }
+  .btn-gold:hover { background: var(--gold-light); transform: translateY(-1px); }
+  .btn-outline {
+    display: inline-block;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    font-family: var(--ff-body);
+    font-size: 13px; font-weight: 600;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    padding: 10px 20px;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .btn-outline:hover { background: var(--gold); color: var(--black); }
+  .nav-mobile { display: none; }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    background: var(--black);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    text-align: center;
+    padding: 100px 24px 80px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background: 
+      radial-gradient(ellipse at 20% 50%, rgba(201,168,76,0.06) 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 20%, rgba(201,168,76,0.04) 0%, transparent 50%);
+    pointer-events: none;
+  }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    padding: 6px 16px;
+    font-size: 12px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 28px;
+  }
+  .hero-badge::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); display: inline-block; }
+  .hero h1 {
+    font-family: var(--ff-head);
+    font-size: clamp(2.8rem, 7vw, 5.5rem);
+    font-weight: 900; line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 20px;
+    max-width: 820px;
+  }
+  .hero h1 em { font-style: italic; color: var(--gold); }
+  .hero-sub {
+    font-size: 18px; font-weight: 300; color: var(--muted);
+    max-width: 480px; margin: 0 auto 40px;
+    line-height: 1.7;
+  }
+  .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
+  .hero-ctas .btn-gold { font-size: 14px; padding: 14px 28px; }
+  .hero-ctas .btn-outline { font-size: 14px; padding: 14px 28px; }
+  .hero-scroll {
+    position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%);
+    display: flex; flex-direction: column; align-items: center; gap: 8px;
+    color: var(--muted); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+  }
+  .scroll-line {
+    width: 1px; height: 40px; background: linear-gradient(to bottom, var(--gold), transparent);
+  }
+
+  /* TRUST BAR */
+  .trust-bar {
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    background: var(--dark2);
+    padding: 28px 24px;
+  }
+  .trust-inner {
+    max-width: 900px; margin: 0 auto;
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 24px; text-align: center;
+  }
+  .trust-item {}
+  .trust-number {
+    font-family: var(--ff-head);
+    font-size: 2.2rem; font-weight: 700;
+    color: var(--gold); line-height: 1;
+    margin-bottom: 4px;
+  }
+  .trust-label { font-size: 12px; font-weight: 500; color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase; }
+  .stars { color: var(--gold); font-size: 16px; letter-spacing: 2px; margin-bottom: 4px; }
+
+  /* SECTIONS */
+  section { padding: 96px 24px; }
+  .section-label {
+    font-size: 11px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 14px;
+  }
+  .section-title {
+    font-family: var(--ff-head);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700; line-height: 1.1;
+    margin-bottom: 16px;
+  }
+  .section-sub { font-size: 16px; color: var(--muted); max-width: 480px; line-height: 1.7; margin-bottom: 48px; }
+  .container { max-width: 1080px; margin: 0 auto; }
+
+  /* SERVICES */
+  #services { background: var(--dark); }
+  .services-header { margin-bottom: 48px; }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+  }
+  .service-card {
+    background: var(--dark2);
+    padding: 32px 28px;
+    transition: background 0.2s;
+    position: relative;
+  }
+  .service-card:hover { background: var(--dark3); }
+  .service-icon {
+    font-size: 28px; margin-bottom: 14px;
+    display: block;
+  }
+  .service-name {
+    font-family: var(--ff-head);
+    font-size: 20px; font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .service-desc { font-size: 13px; color: var(--muted); line-height: 1.6; margin-bottom: 16px; }
+  .service-price {
+    font-size: 13px; font-weight: 600; color: var(--gold);
+    letter-spacing: 0.06em;
+  }
+  .services-cta { margin-top: 40px; text-align: center; }
+
+  /* TEAM */
+  #team { background: var(--black); }
+  .team-header { margin-bottom: 48px; }
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+  }
+  .barber-card {
+    background: var(--dark2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .barber-card:hover { border-color: var(--gold-dim); transform: translateY(-4px); }
+  .barber-avatar {
+    height: 220px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 72px;
+    background: var(--dark3);
+    position: relative;
+    overflow: hidden;
+  }
+  .barber-avatar::after {
+    content: '';
+    position: absolute; bottom: 0; left: 0; right: 0; height: 60px;
+    background: linear-gradient(to top, var(--dark2), transparent);
+  }
+  .barber-info { padding: 24px; }
+  .barber-name {
+    font-family: var(--ff-head);
+    font-size: 22px; font-weight: 700; margin-bottom: 4px;
+  }
+  .barber-role {
+    font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 12px;
+  }
+  .barber-bio { font-size: 13px; color: var(--muted); line-height: 1.65; }
+  .barber-book {
+    margin-top: 20px;
+    display: inline-block;
+    font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--gold); border-bottom: 1px solid var(--gold-dim);
+    padding-bottom: 2px; transition: color 0.2s;
+  }
+  .barber-book:hover { color: var(--gold-light); }
+
+  /* FAQ */
+  #faq { background: var(--dark); }
+  .faq-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+  .faq-list { display: flex; flex-direction: column; gap: 2px; }
+  .faq-item {
+    border-bottom: 1px solid var(--border);
+  }
+  .faq-q {
+    width: 100%; background: none; border: none; cursor: pointer;
+    display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    padding: 20px 0;
+    font-family: var(--ff-body);
+    font-size: 15px; font-weight: 500; color: var(--white);
+    text-align: left; line-height: 1.5;
+    transition: color 0.2s;
+  }
+  .faq-q:hover { color: var(--gold); }
+  .faq-q svg { width: 18px; height: 18px; stroke: var(--gold); flex-shrink: 0; transition: transform 0.25s; }
+  .faq-q[aria-expanded="true"] svg { transform: rotate(45deg); }
+  .faq-a {
+    font-size: 14px; color: var(--muted); line-height: 1.75;
+    max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding 0.2s;
+    padding: 0;
+  }
+  .faq-a.open { max-height: 200px; padding-bottom: 20px; }
+
+  /* LOCATION */
+  #location { background: var(--black); }
+  .location-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+  .map-wrap {
+    border-radius: var(--radius-lg); overflow: hidden;
+    border: 1px solid var(--border); height: 360px;
+    background: var(--dark3);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px; color: var(--muted);
+    position: relative;
+  }
+  .map-wrap iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: none; }
+  .location-details { display: flex; flex-direction: column; gap: 28px; padding-top: 8px; }
+  .loc-row { display: flex; gap: 16px; align-items: flex-start; }
+  .loc-icon {
+    width: 40px; height: 40px; border-radius: 50%;
+    background: var(--dark2); border: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px; flex-shrink: 0;
+  }
+  .loc-label { font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 4px; }
+  .loc-val { font-size: 15px; color: var(--white); line-height: 1.5; }
+  .loc-val a { color: var(--gold); transition: color 0.2s; }
+  .loc-val a:hover { color: var(--gold-light); }
+  .hours-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 24px; font-size: 14px; }
+  .hours-day { color: var(--muted); }
+  .hours-time { color: var(--white); font-weight: 500; }
+
+  /* BOOKING CTA STRIP */
+  .cta-strip {
+    background: var(--gold);
+    padding: 80px 24px;
+    text-align: center;
+  }
+  .cta-strip h2 {
+    font-family: var(--ff-head);
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 900; color: var(--black);
+    margin-bottom: 12px; line-height: 1.1;
+  }
+  .cta-strip p { font-size: 17px; color: rgba(10,10,10,0.65); margin-bottom: 36px; }
+  .btn-dark {
+    display: inline-block;
+    background: var(--black); color: var(--gold);
+    font-family: var(--ff-body);
+    font-size: 14px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+    padding: 16px 36px; border-radius: var(--radius);
+    transition: all 0.2s;
+  }
+  .btn-dark:hover { background: #1A1A1A; transform: translateY(-2px); }
+  .cta-strip .call-line { margin-top: 20px; font-size: 14px; color: rgba(10,10,10,0.55); }
+  .cta-strip .call-line a { color: var(--black); font-weight: 600; }
+
+  /* FOOTER */
+  footer {
+    background: var(--dark);
+    border-top: 1px solid var(--border);
+    padding: 56px 24px 32px;
+  }
+  .footer-inner { max-width: 1080px; margin: 0 auto; }
+  .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+  .footer-brand .nav-logo { font-size: 22px; display: block; margin-bottom: 12px; }
+  .footer-brand p { font-size: 14px; color: var(--muted); line-height: 1.7; max-width: 280px; }
+  .footer-col h4 { font-size: 11px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .footer-col ul li a { font-size: 14px; color: var(--muted); transition: color 0.2s; }
+  .footer-col ul li a:hover { color: var(--white); }
+  .footer-bottom {
+    border-top: 1px solid var(--border); padding-top: 24px;
+    display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;
+  }
+  .footer-bottom p { font-size: 12px; color: var(--muted); }
+  address {
+    font-style: normal; font-size: 14px; color: var(--muted); line-height: 1.8;
+  }
+  address a { color: var(--gold); }
+
+  /* MOBILE STICKY CTA */
+  .mobile-book {
+    display: none;
+    position: fixed; bottom: 0; left: 0; right: 0; z-index: 99;
+    padding: 12px 16px;
+    background: rgba(10,10,10,0.95);
+    border-top: 1px solid var(--border);
+    backdrop-filter: blur(12px);
+  }
+  .mobile-book a { display: block; width: 100%; text-align: center; padding: 14px; font-size: 14px; }
+
+  /* DIVIDER */
+  .gold-line { width: 48px; height: 2px; background: var(--gold); margin: 0 0 20px; }
+
+  @media (max-width: 768px) {
+    nav { padding: 0 16px; }
+    .nav-links { display: none; }
+    .nav-mobile { display: block; }
+    section { padding: 72px 16px; }
+    .faq-layout { grid-template-columns: 1fr; gap: 48px; }
+    .location-layout { grid-template-columns: 1fr; }
+    .footer-top { grid-template-columns: 1fr; gap: 32px; }
+    .footer-bottom { flex-direction: column; align-items: flex-start; }
+    .mobile-book { display: block; }
+    body { padding-bottom: 72px; }
+    .hero { padding-bottom: 120px; }
+    .trust-inner { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<nav role="banner">
+  <div class="nav-logo">Chaps <span>&amp; Co</span></div>
+  <div class="nav-links">
+    <a href="#services">Services</a>
+    <a href="#team">Our Barbers</a>
+    <a href="#faq">FAQ</a>
+    <a href="#location">Location</a>
+    <a href="https://www.fresha.com/a/chaps-and-co-raslouw-pretoria-chaps-co-barbers-jewel-beetle-street-giv79nqi" class="btn-gold" target="_blank" rel="noopener">Book Now</a>
+  </div>
+  <a href="https://www.fresha.com/a/chaps-and-co-raslouw-pretoria-chaps-co-barbers-jewel-beetle-street-giv79nqi" class="btn-gold nav-mobile" target="_blank" rel="noopener">Book Now</a>
+</nav>
+
+<main>
+  <section class="hero" aria-label="Hero">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-badge">Centurion's Finest Barber Shop</div>
+    <h1>Where <em>Sharp</em> Meets<br>Craftsmanship</h1>
+    <p class="hero-sub">Premium cuts, fades &amp; lineups in Raslouw, Pretoria — by barbers who take their craft seriously.</p>
+    <div class="hero-ctas">
+      <a href="https://www.fresha.com/a/chaps-and-co-raslouw-pretoria-chaps-co-barbers-jewel-beetle-street-giv79nqi" class="btn-gold" target="_blank" rel="noopener">Book Your Cut on Fresha</a>
+      <a href="tel:+27726967979" class="btn-outline">Call 072 696 7979</a>
+    </div>
+    <div class="hero-scroll" aria-hidden="true">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <div class="trust-bar" role="complementary" aria-label="Trust signals">
+    <div class="trust-inner">
+      <div class="trust-item">
+        <div class="stars" aria-label="5 stars">★★★★★</div>
+        <div class="trust-number">5.0</div>
+        <div class="trust-label">Google Rating</div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-number">3</div>
+        <div class="trust-label">Expert Barbers</div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-number">100%</div>
+        <div class="trust-label">Online Booking</div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-number">Raslouw</div>
+        <div class="trust-label">Centurion, Pretoria</div>
+      </div>
+    </div>
+  </div>
+
+  <section id="services" aria-labelledby="services-title">
+    <div class="container">
+      <div class="services-header">
+        <div class="section-label">What We Do</div>
+        <div class="gold-line"></div>
+        <h2 class="section-title" id="services-title">Services Built<br>for the Modern Chap</h2>
+        <p class="section-sub">From a clean skin fade to a full beard groom — we've got every cut covered.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <span class="service-icon" aria-hidden="true">✂️</span>
+          <div class="service-name">Haircut</div>
+          <p class="service-desc">Classic cuts tailored to your face shape and style — always clean, always precise.</p>
+          <div class="service-price">Book on Fresha →</div>
+        </div>
+        <div class="service-card">
+          <span class="service-icon" aria-hidden="true">💈</span>
+          <div class="service-name">Skin Fade</div>
+          <p class="service-desc">Zero to skin — seamlessly blended and perfectly executed every single time.</p>
+          <div class="service-price">Book on Fresha →</div>
+        </div>
+        <div class="service-card">
+          <span class="service-icon" aria-hidden="true">🪒</span>
+          <div class="service-name">Beard Trim</div>
+          <p class="service-desc">Sharp edges, clean lines, and a sculpted beard that frames your face right.</p>
+          <div class="service-price">Book on Fresha →</div>
+        </div>
+        <div class="service-card">
+          <span class="service-icon" aria-hidden="true">📐</span>
+          <div class="service-name">Lineup &amp; Edge-Up</div>
+          <p class="service-desc">Crisp temple lines and forehead edges that keep you looking fresh between cuts.</p>
+          <div class="service-price">Book on Fresha →</div>
+        </div>
+        <div class="service-card">
+          <span class="service-icon" aria-hidden="true">👦</span>
+          <div class="service-name">Kids' Cut</div>
+          <p class="service-desc">Patient, gentle cuts for the little chaps — every dad's go-to spot in Centurion.</p>
+          <div class="service-price">Book on Fresha →</div>
+        </div>
+        <div class="service-card">
+          <span class="service-icon" aria-hidden="true">✨</span>
+          <div class="service-name">Combo Deal</div>
+          <p class="service-desc">Haircut + beard trim in one session. The full groom-up — looking sharp, full package.</p>
+          <div class="service-price">Book on Fresha →</div>
+        </div>
+      </div>
+      <div class="services-cta">
+        <a href="https://www.fresha.com/a/chaps-and-co-raslouw-pretoria-chaps-co-barbers-jewel-beetle-street-giv79nqi" class="btn-gold" target="_blank" rel="noopener">View All Services &amp; Prices on Fresha</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="team" aria-labelledby="team-title">
+    <div class="container">
+      <div class="team-header">
+        <div class="section-label">The Crew</div>
+        <div class="gold-line"></div>
+        <h2 class="section-title" id="team-title">Meet Your<br>Barbers</h2>
+        <p class="section-sub">Three skilled hands, one standard — perfection. Book your preferred barber directly on Fresha.</p>
+      </div>
+      <div class="team-grid">
+        <article class="barber-card">
+          <div class="barber-avatar" aria-hidden="true">👑</div>
+          <div class="barber-info">
+            <h3 class="barber-name">Mohammed</h3>
+            <div class="barber-role">Owner &amp; Head Barber</div>
+            <p class="barber-bio">The man behind Chaps &amp; Co. Mohammed built this shop on precision, community, and the belief that every chap deserves a great cut. His attention to detail is unmatched.</p>
+            <a href="https://www.fresha.com/a/chaps-and-co-raslouw-pretoria-chaps-co-barbers-jewel-beetle-street-giv79nqi" class="barber-book" target="_blank" rel="noopener">Book with Mohammed →</a>
+          </div>
+        </article>
+        <article class="barber-card">
+          <div class="barber-avatar" aria-hidden="true">✂️</div>
+          <div class="barber-info">
+            <h3 class="barber-name">Papu</h3>
+            <div class="barber-role">Big Boss — Senior Barber</div>
+            <p class="barber-bio">Papu runs the floor with decades of experience and a quiet confidence. Clients come back week after week — once you're in his chair, you'll understand why.</p>
+            <a href="https://www.fresha.com/a/chaps-and-co-raslouw-pretoria-chaps-co-barbers-jewel-beetle-street-giv79nqi" class="barber-book" target="_blank" rel="noopener">Book with Papu →</a>
+          </div>
+        </article>
+        <article class="barber-card">
+          <div class="barber-avatar" aria-hidden="true">💈</div>
+          <div class="barber-info">
+            <h3 class="barber-name">Ahmad</h3>
+            <div class="barber-role">Barber</div>
+            <p class="barber-bio">Ahmad brings energy, skill, and a sharp eye for modern styles. Whether it's a taper fade or a textured crop, he delivers clean results every time.</p>
+            <a href="https://www.fresha.com/a/chaps-and-co-raslouw-pretoria-chaps-co-barbers-jewel-beetle-street-giv79nqi" class="barber-book" target="_blank" rel="noopener">Book with Ahmad →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" aria-labelledby="faq-title">
+    <div class="container">
+      <div class="faq-layout">
+        <div>
+          <div class="section-label">Got Questions?</div>
+          <div class="gold-line"></div>
+          <h2 class="section-title" id="faq-title">Everything<br>You Need<br>to Know</h2>
+          <p class="section-sub">Can't find your answer? Give us a call on <a href="tel:+27726967979" style="color:var(--gold)">072 696 7979</a>.</p>
+          <a href="https://www.fresha.com/a/chaps-and-co-raslouw-pretoria-chaps-co-barbers-jewel-beetle-street-giv79nqi" class="btn-gold" target="_blank" rel="noopener">Book Now</a>
+        </div>
+        <div>
+          <div class="faq-list" role="list">
+            <div class="faq-item" role="listitem" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-q" aria-expanded="false" itemprop="name" onclick="toggleFaq(this)">
+                Where is Chaps &amp; Co Barbers located?
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </button>
+              <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">We're situated at Jewel Beetle St, Raslouw, Pretoria, 0157 — in the heart of Centurion. Easy to find with parking available nearby.</div></div>
+            </div>
+            <div class="faq-item" role="listitem" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-q" aria-expanded="false" itemprop="name" onclick="toggleFaq(this)">
+                How do I book an appointment at Chaps &amp; Co?
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </button>
+              <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">The easiest way is through our Fresha page — you can choose your barber, your service, and a time that works for you. You can also call us directly on 072 696 7979 to book.</div></div>
+            </div>
+            <div class="faq-item" role="listitem" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-q" aria-expanded="false" itemprop="name" onclick="toggleFaq(this)">
+                Who are the barbers at Chaps &amp; Co?
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </button>
+              <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">Our team consists of Mohammed (owner), Papu (senior barber), and Ahmad. You can choose your preferred barber when booking on Fresha.</div></div>
+            </div>
+            <div class="faq-item" role="listitem" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-q" aria-expanded="false" itemprop="name" onclick="toggleFaq(this)">
+                Does Chaps &amp; Co accept walk-ins?
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </button>
+              <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">We welcome walk-ins when our schedule allows, but we strongly recommend booking ahead via Fresha to secure your preferred time and barber — especially on weekends.</div></div>
+            </div>
+            <div class="faq-item" role="listitem" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-q" aria-expanded="false" itemprop="name" onclick="toggleFaq(this)">
+                What areas do you serve?
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </button>
+              <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">We're based in Raslouw, Centurion, and serve clients from across Pretoria — including Lyttelton, Irene, Zwartkop, Thatchfield, and beyond. Worth the drive.</div></div>
+            </div>
+            <div class="faq-item" role="listitem" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-q" aria-expanded="false" itemprop="name" onclick="toggleFaq(this)">
+                How do I cancel or reschedule my booking?
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </button>
+              <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">You can manage your booking directly through the Fresha app or website — cancellations and rescheduling are straightforward. Please give us reasonable notice so we can accommodate other clients.</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="location" aria-labelledby="location-title">
+    <div class="container">
+      <div class="section-label">Find Us</div>
+      <div class="gold-line"></div>
+      <h2 class="section-title" id="location-title">Come See Us<br>in Raslouw</h2>
+      <div class="location-layout" style="margin-top: 48px;">
+        <div class="map-wrap" aria-label="Map showing Chaps and Co Barbers location">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3594!2d28.152!3d-25.855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sJewel+Beetle+St%2C+Raslouw%2C+Pretoria%2C+0157!5e0!3m2!1sen!2sza!4v1"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            title="Chaps and Co Barbers location map">
+          </iframe>
+        </div>
+        <address class="location-details">
+          <div class="loc-row">
+            <div class="loc-icon" aria-hidden="true">📍</div>
+            <div>
+              <div class="loc-label">Address</div>
+              <div class="loc-val">
+                Jewel Beetle St, Raslouw<br>
+                Pretoria, 0157<br>
+                <a href="https://maps.google.com/?q=Jewel+Beetle+St,+Raslouw,+Pretoria,+0157" target="_blank" rel="noopener" style="font-size:13px; margin-top: 6px; display:inline-block">Get Directions →</a>
+              </div>
+            </div>
+          </div>
+          <div class="loc-row">
+            <div class="loc-icon" aria-hidden="true">📞</div>
+            <div>
+              <div class="loc-label">Phone</div>
+              <div class="loc-val"><a href="tel:+27726967979">072 696 7979</a></div>
+            </div>
+          </div>
+          <div class="loc-row">
+            <div class="loc-icon" aria-hidden="true">🕐</div>
+            <div>
+              <div class="loc-label">Trading Hours</div>
+              <div class="loc-val">
+                <div class="hours-grid">
+                  <span class="hours-day">Monday – Friday</span><span class="hours-time">9:00 – 18:00</span>
+                  <span class="hours-day">Saturday</span><span class="hours-time">8:00 – 17:00</span>
+                  <span class="hours-day">Sunday</span><span class="hours-time">9:00 – 14:00</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="loc-row">
+            <div class="loc-icon" aria-hidden="true">📅</div>
+            <div>
+              <div class="loc-label">Booking</div>
+              <div class="loc-val">
+                <a href="https://www.fresha.com/a/chaps-and-co-raslouw-pretoria-chaps-co-barbers-jewel-beetle-street-giv79nqi" target="_blank" rel="noopener">Book on Fresha</a> — choose your barber &amp; time
+              </div>
+            </div>
+          </div>
+        </address>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="cta-strip" role="complementary" aria-label="Book now call to action">
+  <h2>Ready for Your Next Cut?</h2>
+  <p>Book in seconds. Pick your barber. Show up fresh.</p>
+  <a href="https://www.fresha.com/a/chaps-and-co-raslouw-pretoria-chaps-co-barbers-jewel-beetle-street-giv79nqi" class="btn-dark" target="_blank" rel="noopener">Book Your Cut on Fresha</a>
+  <p class="call-line">Prefer to call? <a href="tel:+27726967979">072 696 7979</a></p>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="nav-logo">Chaps <span style="color:var(--white)">&amp; Co</span></span>
+        <p>Centurion's premier barber shop. Precision cuts, expert fades, and a vibe that keeps you coming back. Located in Raslouw, Pretoria.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#team">Our Barbers</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#location">Location</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Book</h4>
+        <ul>
+          <li><a href="https://www.fresha.com/a/chaps-and-co-raslouw-pretoria-chaps-co-barbers-jewel-beetle-street-giv79nqi" target="_blank" rel="noopener">Book on Fresha</a></li>
+          <li><a href="tel:+27726967979">Call Us</a></li>
+          <li><a href="https://maps.google.com/?q=Jewel+Beetle+St,+Raslouw,+Pretoria" target="_blank" rel="noopener">Directions</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <address>
+        <strong style="color:var(--white); font-size:14px;">Chaps &amp; Co Barbers</strong><br>
+        Jewel Beetle St, Raslouw, Pretoria, 0157<br>
+        <a href="tel:+27726967979">072 696 7979</a>
+      </address>
+      <p>© 2025 Chaps &amp; Co Barbers. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-book" aria-label="Mobile booking bar">
+  <a href="https://www.fresha.com/a/chaps-and-co-raslouw-pretoria-chaps-co-barbers-jewel-beetle-street-giv79nqi" class="btn-gold" target="_blank" rel="noopener">Book Your Cut on Fresha</a>
+</div>
+
+<script>
+function toggleFaq(btn) {
+  const isOpen = btn.getAttribute('aria-expanded') === 'true';
+  document.querySelectorAll('.faq-q').forEach(b => {
+    b.setAttribute('aria-expanded', 'false');
+    b.nextElementSibling.classList.remove('open');
+  });
+  if (!isOpen) {
+    btn.setAttribute('aria-expanded', 'true');
+    btn.nextElementSibling.classList.add('open');
+  }
+}
+</script>
+
+</body>
+</html>
